@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "keywords": ["Laravel","API","Response","Json Response"],
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "farid froozan",
