@@ -1,0 +1,19 @@
+{
+    "name": "farazin-co/laravel-api-response",
+    "description": "This Package helps developers to easily make response for API",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["Laravel","API","Response","Json Response"],
+    "authors": [
+        {
+            "name": "farid froozan",
+            "email": "froozan@yahoo.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FarazinCo\\LaravelApiResponse\\": "src"
+        }
+    }
+}
