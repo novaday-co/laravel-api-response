@@ -1,20 +1,36 @@
 {
     "name": "farazin-co/laravel-api-response",
     "description": "This Package helps developers to easily make response for API",
+    "keywords": ["Laravel","API","Response","Json Response","restful","RESTful API"],
     "type": "library",
     "license": "MIT",
-    "keywords": ["Laravel","API","Response","Json Response"],
-    "minimum-stability": "dev",
+    "homepage": "https://github.com/farazin-co/laravel-api-response",
     "authors": [
         {
             "name": "farid froozan",
-            "email": "froozan@yahoo.com"
+            "email": "froozan@yahoo.com",
+            "homepage": "https://faridfr.ir"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/http": "~5.0|~6.0|~7.0|~8.0",
+        "illuminate/support": "^8.0|^7.0|^6.0|^5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
     "autoload": {
         "psr-4": {
             "FarazinCo\\LaravelApiResponse\\": "src"
         }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests"
+        ]
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "test": "@php vendor/bin/phpunit --colors=always"
     }
 }
