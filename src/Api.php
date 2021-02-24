@@ -3,12 +3,32 @@
 namespace FarazinCo\LaravelApiResponse;
 
 use FarazinCo\LaravelApiResponse\Traits\HasApiMagicCall;
+use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Http\JsonResponse;
+use JsonSerializable;
 
 class Api{
 
     use HasApiMagicCall;
     public static $data=null,$message=null,$errors=null,$code=null,$instance=null,$extra=null;
+
+    /**
+     * Return a new JSON response from the application.
+     *
+     * @param  string|array  $data
+     * @param  int  $status
+     * @param  array  $headers
+     * @param  int  $options
+     * @return \Illuminate\Http\JsonResponse
+     */
+
+    public function json($data = [], $status = 200, array $headers = [], $options = 0)
+    {
+        if ($data instanceof Arrayable && ! $data instanceof JsonSerializable) {
+            $data = $data->toArray();
+        }
+        return new JsonResponse($data, $status, $headers, $options);
+    }
 
     /**
      * response
@@ -122,8 +142,7 @@ class Api{
 
             if (!empty(self::$extra))
                 self::$data = self::$data->merge(collect(self::$extra));
-
-            return response()->json(self::$data, self::$code);
+            return new JsonResponse(self::$data, self::$code);
         }
 
         if(!empty(self::$data)) $jsonResponse['data'] = self::$data ?? null;
@@ -133,7 +152,7 @@ class Api{
         if (!empty(self::$extra))
             $jsonResponse = array_merge($jsonResponse, self::$extra);
 
-        return response()->json($jsonResponse, self::$code);
+        return new JsonResponse($jsonResponse, self::$code);
     }
 
 }
