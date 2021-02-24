@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/faridfr/faridfr/master/200px-laravel-api-response.png" alt="Laravel API Response package" />
+
 # Laravel API Response 
 
 This Package helps developers to easily make response for API . Add extra data to **collection** response . Short magic method that use your translate files to set messages .
@@ -26,17 +28,17 @@ Api::customResponse(201,'Created Successfully',['key'=>'value'])->response();
 
 ### With `data`
 ```php
-Api::success('',['key'=>'value'])->response();
+Api::success('Ok',['key'=>'value'])->response();
 ```
 
 ### External data in `data`
 ```php
-Api::success('',User::all())->withData(Customer::first())->response();
+Api::success('Ok',[ User::all() ])->withData([ Customer::first() ])->response();
 ```
 
 ### External data next to `data`
 ```php
-Api::success('',User::all())->with(['key'=>'value'])->response();
+Api::success('Ok',[ User::all() ])->with([ 'Customers' => Customer::all() ])->response();
 ```
 
 ### Short magic method for set messages
