@@ -1,9 +1,9 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/faridfr/faridfr/master/200px-laravel-api-response.png" height="150" alt="Laravel API Response package" />
-    
-      Laravel API Response 
+    <img src="https://raw.githubusercontent.com/faridfr/faridfr/master/200px-laravel-api-response.png" height="150" alt="Laravel API Response package" /><br>
+    Laravel API Response
 </p>
 
+-----------
 
 This Package helps developers to easily make response for API . Add extra data to **collection** response . Short magic method that use your translate files to set messages .
 
