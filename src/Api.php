@@ -3,14 +3,12 @@
 namespace FarazinCo\LaravelApiResponse;
 
 use FarazinCo\LaravelApiResponse\Traits\HasApiMagicCall;
-use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Http\JsonResponse;
-use JsonSerializable;
 
 class Api{
 
     use HasApiMagicCall;
-    public static $data=null,$message=null,$errors=null,$code=null,$instance=null,$extra=null;
+    public static $data=null,$message=null,$errors=null,$code=null,$instance=null,$extra=null,$headers=[];
 
     /**
      * response
@@ -89,8 +87,7 @@ class Api{
 
     }
 
-    public function with($extra)
-    {
+    public function with($extra){
 
         if (self::$instance === null)
             self::$instance = new self;
@@ -99,6 +96,16 @@ class Api{
 
         return self::$instance;
 
+    }
+
+    public function withHeader($headers){
+
+        if (self::$instance === null)
+            self::$instance = new self;
+
+        self::$headers = $headers;
+
+        return self::$instance;
     }
 
     /**
@@ -134,7 +141,7 @@ class Api{
         if (!empty(self::$extra))
             $jsonResponse = array_merge($jsonResponse, self::$extra);
 
-        return new JsonResponse($jsonResponse, self::$code);
+        return new JsonResponse($jsonResponse, self::$code, self::$headers);
     }
 
 }
