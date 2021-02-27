@@ -98,7 +98,7 @@ class Api{
 
     }
 
-    public function withHeader($headers){
+    public function withHeaders($headers){
 
         if (self::$instance === null)
             self::$instance = new self;
