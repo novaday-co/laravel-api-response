@@ -5,6 +5,12 @@
 
 This Package helps developers to easily make response for API . Add extra data to **collection** response . Short magic method that use your translate files to set messages .
 
+## How to install :
+```
+composer require farazin-co/laravel-api-response
+```
+
+
 ## How to use :
 
 ### Success response
