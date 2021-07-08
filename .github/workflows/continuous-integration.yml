@@ -41,4 +41,4 @@ jobs:
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
         
       - name: Execute tests
-        run: vendor/bin/phpunit --coverage-clover=coverage.clover --verbose && bash <(curl -s https://codecov.io/bash)
+        run: vendor/bin/phpunit tests  --coverage-clover=coverage.clover --verbose && bash <(curl -s https://codecov.io/bash)
