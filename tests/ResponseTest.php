@@ -1,8 +1,8 @@
 <?php
 
-namespace FarazinCo\Tests;
+namespace NovadayCo\Tests;
 
-use FarazinCo\LaravelApiResponse\Api;
+use NovadayCo\LaravelApiResponse\Api;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Http\JsonResponse;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace FarazinCo\LaravelApiResponse\Traits;
+namespace NovadayCo\LaravelApiResponse\Traits;
 
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Str;

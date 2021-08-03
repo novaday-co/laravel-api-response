@@ -1,10 +1,10 @@
 {
-    "name": "farazin-co/laravel-api-response",
+    "name": "novaday-co/laravel-api-response",
     "description": "This Package helps developers to easily make response for API",
     "keywords": ["Laravel","API","Response","Json Response","restful","RESTful API"],
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/farazin-co/laravel-api-response",
+    "homepage": "https://github.com/novaday-co/laravel-api-response",
     "authors": [
         {
             "name": "farid froozan",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "FarazinCo\\LaravelApiResponse\\": "src"
+            "NovadayCo\\LaravelApiResponse\\": "src"
         }
     },
     "autoload-dev": {

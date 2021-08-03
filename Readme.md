@@ -7,7 +7,7 @@ This Package helps developers to easily make response for API . Add extra data t
 
 ## How to install :
 ```
-composer require farazin-co/laravel-api-response
+composer require novaday-co/laravel-api-response
 ```
 
 

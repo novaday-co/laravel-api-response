@@ -1,8 +1,8 @@
 <?php
 
-namespace FarazinCo\LaravelApiResponse;
+namespace NovadayCo\LaravelApiResponse;
 
-use FarazinCo\LaravelApiResponse\Traits\HasApiMagicCall;
+use NovadayCo\LaravelApiResponse\Traits\HasApiMagicCall;
 use Illuminate\Http\JsonResponse;
 
 class Api{
